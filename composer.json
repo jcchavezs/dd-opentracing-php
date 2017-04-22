@@ -7,7 +7,7 @@
         "guzzlehttp/guzzle": "^6.2",
         "jcchavezs/tracing-context": "^0.1.0",
         "jcchavezs/dd-trace": "dev-master",
-        "jcchavezs/open-tracing": "dev-master"
+        "jcchavezs/opentracing": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "~5.7.19"
