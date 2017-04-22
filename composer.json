@@ -1,5 +1,5 @@
 {
-    "name": "jcchavezs/dd-open-tracing",
+    "name": "jcchavezs/dd-opentracing",
     "description": "DataDog implementation for OpenTracing in PHP",
     "type": "library",
     "require": {
