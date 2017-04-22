@@ -45,7 +45,7 @@ $response = Response::create("", 200);
 
 $response->send();
 
-/** This flushes the traces, if the buffer could be persisted, a worker could flush the traces from time to time. */
+// This flushes the traces, if the buffer could be persisted, a worker could flush the traces from time to time.
 $tracer->tracer()->flushTraces();
 
 function readFromDB(SpanContext $spanContext)
