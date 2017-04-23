@@ -1,8 +1,18 @@
 # DataDog OpenTracing PHP
 
+[![Build Status](https://travis-ci.org/jcchavezs/dd-opentracing-php.svg?branch=master)](https://travis-ci.org/jcchavezs/dd-opentracing-php)
+
 Datadog OpenTracing implementation for PHP
 
-# Examples
+## Installation
+
+Execute:
+
+```php
+composer require jcchavezs/dd-opentracing
+```
+
+## Examples
 
 ```php
 use DdOpenTracing\Tracer;
