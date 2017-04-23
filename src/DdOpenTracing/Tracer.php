@@ -15,6 +15,7 @@ use OpenTracing\SpanReference;
 use OpenTracing\Tag;
 use OpenTracing\Tracer as OTTracer;
 use Psr\Log\LoggerInterface;
+use Psr\Log\NullLogger;
 
 final class Tracer implements OTTracer
 {
@@ -32,6 +33,11 @@ final class Tracer implements OTTracer
         $this->tracer = $tracer;
         $this->logger = $logger;
         $this->propagator = new TextMap($this);
+    }
+
+    public static function noop()
+    {
+        return new self(DdTracer::noop(), new NullLogger);
     }
 
     public function inject(SpanContext $spanContext, $format, TextMapWriter $carrier)

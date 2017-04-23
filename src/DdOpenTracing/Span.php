@@ -20,7 +20,6 @@ final class Span implements OTSpan
 
     private $tracer;
     private $span;
-    private $operationName;
 
     private function __construct(Tracer $tracer, DdSpan $span)
     {
@@ -62,7 +61,7 @@ final class Span implements OTSpan
 
     public function operationName()
     {
-        return $this->operationName;
+        return $this->span->name();
     }
 
     /** @return SpanContext */
@@ -86,7 +85,7 @@ final class Span implements OTSpan
 
         $this->checkIfSpanIsFinished();
 
-        $this->operationName = $newOperationName;
+        $this->span->withName($newOperationName);
     }
 
     public function setTag(Tag $tag)
