@@ -2,13 +2,13 @@
 
 [![Build Status](https://travis-ci.org/jcchavezs/dd-opentracing-php.svg?branch=master)](https://travis-ci.org/jcchavezs/dd-opentracing-php)
 
-Datadog OpenTracing implementation for PHP
+DataDog implementation for OpenTracing in PHP
 
 ## Installation
 
 Execute:
 
-```php
+```sh
 composer require jcchavezs/dd-opentracing
 ```
 
@@ -41,10 +41,7 @@ GlobalTracer::setGlobalTracer($tracer);
 
 $spanContext = GlobalTracer::globalTracer()->extract(
     Propagator::HTTP_HEADERS,
-    HttpHeaders::withHeaders(
-    	 // string[string] array is required
-        array_map(function($values) {return $values[0]; }, $request->headers->all())
-    )
+    HttpHeaders::fromRequest($request)
 );
 
 usleep(200);
