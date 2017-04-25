@@ -4,6 +4,7 @@ namespace DdOpenTracing\Propagators;
 
 use DdOpenTracing\Span;
 use DdOpenTracing\Tracer;
+use OpenTracing\Exceptions\SpanContextNotFound;
 use OpenTracing\Propagator;
 use OpenTracing\Propagators\TextMapReader;
 use OpenTracing\Propagators\TextMapWriter;
@@ -53,6 +54,10 @@ final class TextMap implements Propagator
 
         $defaultService = "localhost";
         $defaultResource = "/";
+
+        if ($traceId === null || $spanId === null) {
+            throw SpanContextNotFound::create();
+        }
 
         $span = Span::create($this->tracer, "", $defaultService, $defaultResource, $spanId, $traceId, $parentId);
 
