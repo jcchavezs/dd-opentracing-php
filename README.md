@@ -1,8 +1,8 @@
 # DataDog OpenTracing PHP
 
+[![Build Status](https://travis-ci.org/jcchavezs/dd-opentracing-php.svg?branch=master)](https://travis-ci.org/jcchavezs/dd-opentracing-php)
 [![Join the chat at https://gitter.im/dd-opentracing-php/Lobby](https://badges.gitter.im/dd-opentracing-php/Lobby.svg)](https://gitter.im/dd-opentracing-php/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[![Build Status](https://travis-ci.org/jcchavezs/dd-opentracing-php.svg?branch=master)](https://travis-ci.org/jcchavezs/dd-opentracing-php)
 
 DataDog implementation for OpenTracing in PHP
 
