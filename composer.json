@@ -6,7 +6,7 @@
         "php": "^5.6||^7.0",
         "guzzlehttp/guzzle": "^6.2",
         "jcchavezs/tracing-context": "^0.1.0",
-        "jcchavezs/dd-trace": "^0.2.1",
+        "jcchavezs/dd-trace": "^0.2.3",
         "jcchavezs/opentracing": "^0.3.1"
     },
     "require-dev": {
